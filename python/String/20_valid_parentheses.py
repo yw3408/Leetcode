@@ -25,4 +25,15 @@
 # # con: time complex O(n), not an idea method
 
 # method 2
+class Solution:
+    def isValid(self, s):
+        while "()" in s or "{}" in s or '[]' in s:
+            s = s.replace("()", "").replace('{}', "").replace('[]', "")
+        return s == ''
+# con: time complexity O(n)
+
+a = Solution()
+s = '(([]))'
+print(a.isValid(s))
+
 
